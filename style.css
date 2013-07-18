@@ -1,0 +1,14 @@
+/*
+Theme Name:     FearlessMedia.org
+Theme URI:      http://largoproject.org
+Description:    A child theme for FearlessMedia.org based on the Project Largo parent theme.
+Author:         Adam Schweigert/INN
+Author URI:     http://largoproject.org
+Template:       largo
+Version:        0.1.0
+*/
+
+/* First we need to import the stylesheet from the Largo parent theme */
+@import url("../largo/style.css");
+
+/* Now you can add any of your custom styles below this line */
