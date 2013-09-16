@@ -4,11 +4,427 @@ Theme URI:      http://largoproject.org
 Description:    A child theme for FearlessMedia.org based on the Project Largo parent theme.
 Author:         Adam Schweigert/INN
 Author URI:     http://largoproject.org
-Template:       largo
+Template:       largo-new
 Version:        0.1.0
 */
 
-/* First we need to import the stylesheet from the Largo parent theme */
-@import url("../largo/style.css");
+#sidebar .widget,
+.navbar-inner,
+.single-post .author-box,
+.pager a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+p {
+  font-family: "ff-meta-serif-web-pro", Georgia, serif;
+  font-weight: 500;
+}
+.btn-primary,
+.btn-primary:hover {
+  background-color: #333;
+}
+.global-nav-bg,
+.footer-bg {
+  background-color: #000;
+}
+.global-nav .nav-right .org-logo {
+  float: left;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  height: auto;
+  overflow: visible;
+  margin: 0;
+}
+.global-nav .nav-right .org-logo img {
+  height: 38px;
+}
+h1.branding,
+h2.branding {
+  float: left;
+  clear: none;
+  margin: 8px 0 0;
+  font-size: 24px;
+  font-family: "jaf-bernino-sans-condensed", "helvetica neue", helvetica, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+h1.branding a,
+h2.branding a,
+#site-footer a {
+  color: #fff;
+}
+h1.branding a:hover,
+h2.branding a:hover,
+#site-footer a:hover {
+  color: #ddd;
+}
+h1.branding .tagline,
+h2.branding .tagline {
+  font-size: 10px;
+  color: #dedede;
+}/*
+.navbar,
+.navbar li>a {
+  color: #333;
+}
+.navbar li>a:hover,
+.navbar .active>a,
+.navbar .active>a:hover {
+  color: #999;
+  background-color: #fff;
+}
+.navbar .active>a,
+.navbar .active>a:hover {
+  color: #000;
+  font-weight: bold;
+}
+.navbar-inner {
+  clear:both;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-top: 0;
+}
+.navbar .divider-vertical {
+  background-color: #333;
+  border: 0;
+}
+.navbar .btn-navbar {
+  background-color: #333;
+}
+.navbar .nav li.dropdown .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open .caret {
+	border-top-color: #333;
+	border-bottom-color: #333;
+}
+.nav-collapse .nav>li>a {
+  color: #333;
+}
+.nav-collapse .nav>li>a:hover {
+  color: #999;
+}*/
+#topics-bar {
+  padding:5px 0;
+}
+#topics-bar a {
+  color: #333;
+}
+.icon-search:before {
+  content: '\4d';
+}
+#header-search {
+  position: relative;
+  overflow: hidden;
+}
+#header-search	a.icon-search {
+  display: block;
+  color: white;
+  font-size: 20px;
+  text-shadow: 0 0 5px #999999;
+  padding: 0 4px 4px 7px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  .transition(all 0.2s ease);
+  height: 30px;
+  max-height: 30px;
+}
+#header-search	a.icon-search:hover {
+  text-shadow: 0 0 8px white;
+  text-decoration: none;
+}
+#header-search form {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  .transition(all 0.2s ease);
+  background-color: #333;
+  pointer-events: none;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 33px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+#header-search .input-append {
+  white-space: nowrap;
+}
+#header-search.open {
+  overflow: visible;
+}
+#header-search.open	a.icon-search {
+  text-shadow: 0 1 1px #333333;
+  background-color: #333;
+  text-decoration: none;
+}
+#header-search.open form {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  pointer-events: auto;
+}
+#content ul,
+#content ol {
+  font-family: "ff-meta-serif-web-pro", Georgia, serif;
+}
+.column-title,
+#sidebar .widgettitle {
+  background-color: #000;
+  padding: 20px 10px 10px;
+  font-family: "jaf-bernino-sans-condensed", "helvetica neue", helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.column-title .more {
+  font-weight: 600;
+  float: right;
+  font-size: 11px;
+  padding-top: 4px;
+  letter-spacing: 0;
+}
+.column-title .more a {
+  color: #fff;
+}
+.top-tag {
+  font-family: "jaf-bernino-sans-condensed", "helvetica neue", helvetica, sans-serif;
+}
+.home #left-rail article {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+.home #sidebar .widgettitle,
+.category #sidebar .widgettitle {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-family: "jaf-bernino-sans-condensed", "helvetica neue", helvetica, sans-serif;
+}
+.home #sidebar .widgettitle a,
+.category #sidebar .widgettitle a {
+  color: #999;
+}
+.home #left-rail h4,
+.home #sidebar h4,
+.category #sidebar h4 {
+  margin: 4px 0;
+  font-size: 21px;
+  line-height: 1.1;
+}
+.home #left-rail p.date,
+.home #sidebar p.date,
+.category #sidebar p.date {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 0;
+}
+.home #left-rail img {
+  width: 100%;
+  max-width: 100%;
+  clear: both;
+}
+.home #content-main .entry-content,
+.home #content-main .post-social {
+  margin-bottom: 0;
+}
+.entry-title {
+  font-family: "jaf-bernino-sans-condensed", "helvetica neue", helvetica, sans-serif;
+  font-weight: 800;
+}
+.entry-title a {
+  color: #000;
+}
+.home .post-social span.print {
+  display: none;
+}
+.home #content-main h2.entry-title {
+  font-size: 44px;
+  line-height: 1.1;
+}
+.home #content-main {
+  border-bottom: 1px solid #000;
+}
+.home #content-main h5.tag-list {
+  margin-bottom: 12px;
+}
+.home #content-main .bottom-meta {
+  padding-bottom: 8px;
+}
+.home #content-main .more {
+  font-size: 19px;
+  font-weight: bold;
+}
+.home #content-main a.more-link {
+  color: #000;
+}
+.home .stories article {
+  border-bottom: 8px solid #000;
+}
+.page-template-page-features-php .item {
+  margin-bottom: 12px;
+}
+.page-template-page-features-php #content h3 {
+  font-family: "jaf-bernino-sans-condensed", "helvetica neue", helvetica, sans-serif;
+  font-size: 21px;
+  margin-bottom: 0;
+}
+.page-template-page-features-php #content p.description {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.page-template-page-features-php #content h3 a {
+  color: #000;
+}
+.row-fluid #content {
+  margin-left: 0;
+}
+.category-header {
+  margin-bottom: 8px;
+}
+.category-header .related-topics {
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+.category-header .related-topics span.heading {
+  font-weight: bold;
+}
+.category-header .related-topics a {
+  color: #333;
+}
+.category .primer {
+  padding: 20px 20px 10px;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+}
+.category .primer a {
+  color: #fff;
+}
+.category .primer img {
+  float: left;
+  margin: 0 20px 20px 0;
+  max-width: 33.333333333%;
+}
+.category .primer h4 {
+  margin-bottom: 4px;
+}
+.category .primer p.more {
+  font-weight: bold;
+}
+.category h3.recent-posts {
+  clear: both;
+}
+.widgettitle {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+#sidebar .magic-widget-single .widgettitle {
+  padding-top: 10px;
+  margin-bottom: 4px;
+}
+.magic-widget-single .widgettitle span {
+  font-size: 10px;
+  font-weight: 800;
+}
+.magic-widget-single .topics-list {
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+.magic-widget-single .topics-list .heading {
+  font-weight: bold;
+}
+.magic-widget-single .topics-list a {
+  color: #333;
+}
+.magic-widget-single .top-tag {
+  color: #999;
+}
+.magic-widget-single .primer {
+  margin-bottom: 12px;
+}
+.magic-widget-single .primer h5.top-tag {
+  margin-bottom: 0;
+}
+.magic-widget-single .primer h4.entry-title,
+.magic-widget-single .feature h4.entry-title {
+  margin-bottom: 4px;
+  font-size: 21px;
+  line-height: 1.1;
+}
+.magic-widget-single .primer h4.entry-title {
+  font-size: 28px;
+}
+.magic-widget-single .primer img,
+.magic-widget-single .feature img {
+  margin-bottom: 8px;
+}
+.magic-widget-single .primer p {
+  margin-bottom: 4px;
+  padding: 0;
+}
+.magic-widget-single .primer p.more {
+  font-weight: bold;
+}
+.magic-widget-single .primer p.more a {
+  color: #000;
+}
+.magic-widget-single .blog-post h4.entry-title {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.magic-widget-single .blog-post p.date {
+  margin-bottom: 12px;
+  padding: 0;
+}
 
-/* Now you can add any of your custom styles below this line */
+@media (max-width: 980px) {
+	h1.branding .tagline,
+	h2.branding .tagline,
+	.org-logo {
+	  display: none !important;
+	}
+}
+@media (max-width: 850px) {
+  .nav.hidden-phone{display:none !important;}
+  .nav .visible-phone{display: inherit !important;}
+}
+@media (max-width: 768px) {
+	.global-nav .nav-right {
+	  width: 50%;
+	}
+	.global-nav .nav-right #header-search,
+	.global-nav .nav-right .donate-btn {
+	  float: right;
+	}
+	#header-social {
+	  display: none !important;
+	}
+	#topics-bar li.menu-label{
+	  display: none;
+	}
+}
+@media (max-width: 480px) {
+	.global-nav .nav-right #header-search {
+	  float: right;
+	}
+	.global-nav .nav-right .donate-btn {
+	  float: left;
+	}
+
+}
