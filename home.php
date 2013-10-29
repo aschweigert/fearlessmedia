@@ -9,8 +9,6 @@ get_header();
  * and get the theme option to determine if this is a two column or three column layout
  */
 $ids = array();
-$layout = of_get_option('homepage_layout');
-$tags = of_get_option ('tag_display');
 ?>
 
 <div id="content" class="span9" role="main">
@@ -48,8 +46,14 @@ $tags = of_get_option ('tag_display');
 		?>
 	</div>
 	<div id="left-rail" class="span4">
+		<?php
+			if ( is_active_sidebar( 'sidebar-home-top-left' ) ) {
+				echo '<div class="sidebar-home-top-left">';
+				dynamic_sidebar( 'sidebar-home-top-left' );
+				echo '</div>';
+			}
+		?>
 		<h2 class="column-title">Regular Features<span class="more"><a href="/features/">view&nbsp;all&nbsp;&raquo;</a></span></h2>
-
 		<?php
 			$args = array(
 				'paged'			=> $paged,
@@ -86,6 +90,13 @@ $tags = of_get_option ('tag_display');
 </div><!-- #content-->
 
 <aside id="sidebar" class="span3">
+	<?php
+		if ( is_active_sidebar( 'sidebar-home-top-right' ) ) {
+			echo '<div class="sidebar-home-top-right">';
+			dynamic_sidebar( 'sidebar-home-top-right' );
+			echo '</div>';
+		}
+	?>
 	<h2 class="column-title">Hot Topics<span class="more"><a href="/topics/">view&nbsp;all&nbsp;&raquo;</a></span></h2>
 	<?php dynamic_sidebar( 'sidebar-home' ); ?>
 </aside>

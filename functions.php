@@ -27,7 +27,8 @@ function fm_widgets() {
 add_action( 'widgets_init', 'fm_widgets' );
 
 function fm_sidebars() {
-	register_sidebar( array(
+	register_sidebar(
+	  array(
 		'name' => 'Homepage Hot Topics',
 		'id' => 'sidebar-home',
 		'description' => 'The right column on the homepage',
@@ -35,7 +36,30 @@ function fm_sidebars() {
 		'after_widget' 	=> "</aside>",
 		'before_title' 	=> '<h3 class="widgettitle">',
 		'after_title' 	=> '</h3>'
-	) );
+	  )
+	);
+	register_sidebar(
+	  array(
+		'name' => 'Homepage Left Column - Top',
+		'id' => 'sidebar-home-top-left',
+		'description' => 'Optional widget area above the Regular Features area on the homepage.',
+		'before_widget' => '<aside id="%1$s" class="%2$s clearfix">',
+		'after_widget' 	=> "</aside>",
+		'before_title' 	=> '<h3 class="widgettitle">',
+		'after_title' 	=> '</h3>'
+	  )
+	);
+	register_sidebar(
+	  array(
+		'name' => 'Homepage Right Column - Top',
+		'id' => 'sidebar-home-top-right',
+		'description' => 'Optional widget area above the Hot Topics area on the homepage.',
+		'before_widget' => '<aside id="%1$s" class="%2$s clearfix">',
+		'after_widget' 	=> "</aside>",
+		'before_title' 	=> '<h3 class="widgettitle">',
+		'after_title' 	=> '</h3>'
+	  )
+	);
 	unregister_sidebar( 'homepage-left-rail' );
 }
 add_action( 'widgets_init', 'fm_sidebars', 11 );
